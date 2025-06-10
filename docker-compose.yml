@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  pdf-to-jpg-api:
+    build: .
+    ports:
+      - "8080:8000"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
